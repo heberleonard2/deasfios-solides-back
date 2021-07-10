@@ -1,11 +1,11 @@
 const Yup = require('yup');
-const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
-const authConfig = require('../config/auth');
 const User = require('../models/User');
 
 module.exports = {
   async store(req, res) {
+    const { name, email, password } = req.body;
     const schema = Yup.object().shape({
       name: Yup.string().required(),
       email: Yup.string().email().required(),
@@ -16,26 +16,35 @@ module.exports = {
       return res.status(400).json({ error: 'Validation fails' });
     }
     const userExists = await User.findOne({
-      email: req.body.email,
+      email,
     });
     if (userExists) {
       return res.status(400).json({ error: 'User already exists' });
     }
-    const { id, name, email } = await User.create(req.body);
-    return res.json({
-      user: {
+
+    const salt = await bcrypt.genSalt(10);
+    const hashPassword = await bcrypt.hash(password, salt);
+    try {
+      const { id } = await User.create({
+        name,
+        email,
+        password: hashPassword,
+      });
+      return res.json({
         id,
         name,
         email,
-      },
-      token: jwt.sign({ id }, authConfig.secret, {
-        expiresIn: authConfig.expiresIn,
-      }),
-    });
+      });
+    } catch (err) {
+      res.status(400).send(err);
+    }
   },
   async index(req, res) {
-    const { name, email } = await User.findById(req.userId);
-
+    const userData = await User.findById(req.userId);
+    if (!userData) {
+      return res.status(400).json({ error: 'Invalid token' });
+    }
+    const { name, email } = userData;
     return res.json({
       user: {
         name,

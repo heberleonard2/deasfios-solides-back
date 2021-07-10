@@ -5,6 +5,7 @@
 // destroy - destruir uma seção
 const Yup = require('yup');
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
 const authConfig = require('../config/auth');
 const User = require('../models/User');
@@ -28,9 +29,12 @@ module.exports = {
     if (!user) {
       return res.status(401).json({ error: 'User not found' });
     }
-    // if (!(await user.checkPassword(password))) {
-    //   return res.status(401).json({ error: 'Password does not match' });
-    // }
+
+    const validPass = await bcrypt.compare(password, user.password);
+
+    if (!validPass) {
+      return res.status(401).json({ error: 'Password does not match' });
+    }
 
     const { id, name } = user;
     return res.json({
