@@ -2,6 +2,7 @@ const User = require('../models/User');
 const WorkTime = require('../models/WorkTime');
 const startOfDay = require('date-fns/startOfDay');
 const endOfDay = require('date-fns/endOfDay');
+
 module.exports = {
   async index(req, res) {
     const { date } = req.query;

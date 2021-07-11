@@ -1,8 +1,3 @@
-// index - Listar tudo
-// show - lista ruma unica
-// store - criar uma secao
-// update - alterar uma secao
-// destroy - destruir uma seção
 const Yup = require('yup');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
