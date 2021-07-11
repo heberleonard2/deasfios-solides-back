@@ -17,8 +17,4 @@ routes.get('/users', UserController.index);
 routes.get('/worktime', WorkTimeController.index);
 routes.post('/worktime', WorkTimeController.store);
 
-routes.get('/dashboard', (req, res) => {
-  res.json({ message: 'ta logado' });
-});
-
 module.exports = routes;
