@@ -16,5 +16,6 @@ routes.get('/users', UserController.index);
 
 routes.get('/worktime', WorkTimeController.index);
 routes.post('/worktime', WorkTimeController.store);
+routes.delete('/worktime/:id', WorkTimeController.delete);
 
 module.exports = routes;

@@ -54,4 +54,8 @@ module.exports = {
     });
     return res.json(workTime);
   },
+  async delete(req, res) {
+    await WorkTime.findByIdAndRemove(req.params.id);
+    return res.sendStatus(200);
+  },
 };
