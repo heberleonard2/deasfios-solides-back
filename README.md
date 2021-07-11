@@ -23,7 +23,7 @@ Demo da aplicação rodando no
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [NodeJS](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/)
 - [express](https://expressjs.com/)
 - [date-fns](https://date-fns.org/)
 - [dotenv](https://github.com/motdotla/dotenv)
@@ -31,7 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [mongoose](https://mongoosejs.com/)
 - [yup](https://github.com/jquense/yup)
 
-O Banco de dados utilizado para aplicação foi o MongoDB, usando a DBAAs MongoDB Atlas.
+O Banco de dados utilizado para aplicação foi o MongoDB, usando a DBAAs <a href="https://www.mongodb.com/cloud/atlas" target="_blank">MongoDB Atlas.</a>
 
 ## :information_source: Como usar
 
@@ -52,7 +52,7 @@ $ yarn install
 $ yarn dev
 ```
 
-### Info
+### Front-end:
 
 O Front-end da aplicação se encontra <a href="https://github.com/heberleonard2/desafio-solides-front">nesse link</a>.
 
