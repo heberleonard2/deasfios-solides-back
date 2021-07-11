@@ -1,4 +1,4 @@
 module.exports = {
   secret: 'solides',
-  expiresIn: '7d',
+  expiresIn: '2h',
 };
