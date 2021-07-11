@@ -9,7 +9,6 @@ module.exports = {
     const userId = req.userId;
     if (date) {
       const parsedDate = new Date(date);
-
       const worktimes = await WorkTime.find({
         createdAt: {
           $gte: startOfDay(parsedDate),
