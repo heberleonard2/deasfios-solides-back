@@ -42,7 +42,7 @@ module.exports = {
   async index(req, res) {
     const userData = await User.findById(req.userId);
     if (!userData) {
-      return res.status(400).json({ error: 'Invalid token' });
+      return res.status(400).json({ error: 'User does not exists' });
     }
     const { name, email } = userData;
     return res.json({
