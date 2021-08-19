@@ -1,12 +1,10 @@
 <h3>
   WebApp para estagiários apontarem hora de trabalho. (Back-End)
 </h3>
-<p>Projeto desenvolvido para o processo seletivo de Dev React na Sólides Tecnologia.</p>
-
 <p >
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-como-usar">Como usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-detalhes-da-solução-proposta">Detalhes da solução proposta</a>
+  <a href="#information_source-detalhes">Detalhes</a>
 </p>
 
 <p>
@@ -40,10 +38,10 @@ Para clonar e executar esta aplicação, você precisará do [Git](https://git-s
 ```bash
 
 # Clone o repositório
-$ git clone https://github.com/heberleonard2/desafio-solides-back
+$ git clone https://github.com/heberleonard2/time-tracking-back
 
 # Vá para o repositório
-$ cd desafio-solides-back
+$ cd time-tracking-back
 
 # Instale as dependências
 $ yarn install
@@ -54,9 +52,9 @@ $ yarn dev
 
 ### Front-end:
 
-O Front-end da aplicação se encontra <a href="https://github.com/heberleonard2/desafio-solides-front">nesse link</a>.
+O Front-end da aplicação se encontra <a href="https://github.com/heberleonard2/time-tracking-front">nesse link</a>.
 
-## :information_source: Detalhes da solução proposta
+## :information_source: Detalhes
 
 ### Descrição Geral
 
