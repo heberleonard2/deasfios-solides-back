@@ -11,8 +11,8 @@
 Demo da aplicação rodando no
 <a href="https://www.heroku.com/home" target="_blank">Heroku</a>:
 <p>
-  <a href="https://solides-desafio-back.herokuapp.com/" target="_blank">
-    https://solides-desafio-back.herokuapp.com/
+  <a href="https://time-tracking-back.herokuapp.com/" target="_blank">
+    https://time-tracking-back.herokuapp.com/
     </p>
   </a>
 </p>
